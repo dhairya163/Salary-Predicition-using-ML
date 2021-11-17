@@ -1,6 +1,27 @@
 # Salary-Predicition-using-ML
 Created a WebApp where user can predict Software Developer salary by giving input various number of features such as Country , Level of Education and Work Experience. Salary is predicted using Machine Learning models.
 
+Prerequisites-
+
+streamlit
+
+numpy
+
+pandas
+
+scikit-learn (Need just to change something in model, not required for execution of webapp)
+
+pickle
+
+.
+
+.
+
+.
+
+Execute command in terminal to run WebApp -
+
+streamlit run {destination_folder}\app.py  
 
 
 ![image](https://user-images.githubusercontent.com/64198273/142241726-8cca9d82-75a4-4266-8166-86c510956a27.png)
