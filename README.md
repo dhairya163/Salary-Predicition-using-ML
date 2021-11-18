@@ -5,7 +5,7 @@ The data is taken from Developer Survey result by StackOverflow 2020. The data i
 
 Streamlit library is used to render WebApp and link the model to a WebApp where user can input various fields in port of buttons and sliders and the python script calculates the salary based on the given input using the regression model selected.
 
-Prerequisites-
+# Prerequisites-
 
 streamlit
 
@@ -13,20 +13,17 @@ numpy
 
 pandas
 
-scikit-learn (Need just to change something in model, not required for execution of webapp)
-
 pickle
 
-.
+scikit-learn (Need just to change something in model, not required for execution of webapp)
 
-.
-
-.
+# Steps to run webapp -
 
 Execute command in terminal to run WebApp -
 
 streamlit run {destination_folder}\app.py  
 
+# Some screenshots of the webapp
 
 ![image](https://user-images.githubusercontent.com/64198273/142244172-9b46af1e-d55a-40ad-80ce-33c193af8945.png)
 
