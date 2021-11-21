@@ -15,7 +15,7 @@ pandas
 
 pickle
 
-scikit-learn (Need just to change something in model, not required for execution of webapp)
+scikit-learn
 
 # Steps to run webapp -
 
