@@ -2,7 +2,7 @@ import streamlit as st
 from predict_page import model_dt,model_linear,model_gradient
 from explore_page import show_explore
 
-explore = st.sidebar.selectbox("Choose your option:",("Predict","Explore Data"))
+explore = st.sidebar.selectbox("Choose your option:",("Explore Data","Predict"))
 
 if(explore=="Predict"):
     selection = st.sidebar.selectbox("Regression Model",("Decision Tree Regressor","Linear Regressor","Gradient Regressor"))

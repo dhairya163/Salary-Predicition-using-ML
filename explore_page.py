@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 #Function to lower the countries in data & keep only countries which have more than threshold data available
 def country_adjust(categories,threshold):
@@ -88,9 +89,8 @@ def show_explore():
     agree = st.button("Click to see Mean Salary based on Country")
     if agree:
         data_salmean = df.groupby(["Country"])["Salary"].mean().sort_values(ascending=False)
-        print(data_salmean)
         st.bar_chart(data_salmean)
-
+        print("called 2")
 
     
     st.write("""
@@ -99,8 +99,8 @@ def show_explore():
     agree = st.button("Click to see Mean Years of Experience based on Country")
     if agree:
         data_expmean = df.groupby(["Country"])["YearsCodePro"].mean().sort_values(ascending=False)
-        print(data_expmean)
         st.bar_chart(data_expmean)
+        print("called 3")
 
     st.write("""
     ### Mean Salary based on Years of Experience
@@ -108,8 +108,8 @@ def show_explore():
     agree = st.button("Click to see Mean Salary based on Years of Experience")
     if agree:
         data_expsal = df.groupby(["YearsCodePro"])["Salary"].mean().sort_values(ascending=False)
-        print(data_expsal)
         st.line_chart(data_expsal)
+        print("called 4")
 
     st.write("""
     ### All Data of Salaries
@@ -118,6 +118,7 @@ def show_explore():
     if agree:
         chart_data = pd.DataFrame(df[:], columns=["Salary"])
         st.area_chart(chart_data)
+        print("called 5")
 
     st.write("""
     ### Box Plot of Salaries to Identify Outliers
@@ -131,6 +132,7 @@ def show_explore():
         plt.ylabel("Salary")
         plt.xticks(rotation=90)
         st.pyplot(fig)
+        print("called 6")
 
 
 
@@ -146,3 +148,55 @@ def show_explore():
         plt.ylabel("Experience")
         plt.xticks(rotation=90)
         st.pyplot(fig)
+        print("called 7")
+
+
+    st.write("""
+    ### Gender Percentage
+    """)
+    agree = st.button("Click to see Gender Percentages")
+    if agree:
+        fig , ax = plt.subplots(figsize=(2,2))
+        dataframe = pd.read_csv("survey_results_public.csv")
+        dataframe = dataframe[["Gender"]]
+        myexplode = [0.2, 0]
+        dataframe["Gender"] = dataframe[dataframe["Gender"].isin(["Man","Woman"])]
+        ax.pie(dataframe["Gender"].value_counts(),labels = dataframe["Gender"].value_counts().index,explode = myexplode,shadow=True,autopct='%1.0f%%',textprops={'fontsize': 4})
+        plt.title("Gender Analytics")
+        st.pyplot(fig)
+        print("called 8")
+
+
+    st.write("""
+    ### No. of people that reported their Work Hours Per Week
+    """)
+    agree = st.button("Click to see Work Hours Per Week")
+    if agree:
+        fig , ax = plt.subplots()
+        dataframe = pd.read_csv("survey_results_public.csv")
+        dataframe = dataframe[["WorkWeekHrs"]]
+        dataframe["WorkWeekHrs"] = dataframe[dataframe["WorkWeekHrs"]<=100]
+        dataframe["WorkWeekHrs"] = dataframe[dataframe["WorkWeekHrs"]>=30]
+        ax.hist(dataframe["WorkWeekHrs"],color = "skyblue", ec="skyblue")
+        plt.title('Number of people that voted particular Work Hours in a Week')
+        plt.xlabel("Hours per Week")
+        plt.ylabel("No. of People")
+        st.pyplot(fig)
+        print("called 9")
+
+
+    st.write("""
+    ### No. of people that reported their Developer Type
+    """)
+    agree = st.button("Click to see Developer Types")
+    if agree:
+        fig , ax = plt.subplots()
+        dataframe = pd.read_csv("survey_results_public.csv")
+        dataframe = dataframe[["DevType"]]
+        dataframe["DevType"] = dataframe[dataframe["DevType"].isin(["Developer, full-stack","Developer, back-end","Developer, front-end"])]
+        plt.barh(dataframe["DevType"].value_counts().index,dataframe["DevType"].value_counts(),color="khaki")
+        plt.title('Number of people that voted particular DevType')
+        plt.xlabel("No. of People")
+        plt.ylabel("Devloper Type")
+        st.pyplot(fig)
+        print("called 10")
