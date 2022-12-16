@@ -1,4 +1,4 @@
-# Salary-Predicition-using-ML
+<!-- # Salary-Predicition-using-ML
 Created a WebApp where user can predict Software Developer salary by giving input various number of features such as Country , Level of Education and Work Experience. Salary is predicted using Machine Learning models such as Decision Trees , Linear Regressor and more.
 
 The data is taken from Developer Survey result by StackOverflow 2020. The data is then cleaned and scaled before applying the regression model.
@@ -15,7 +15,7 @@ pandas
 
 scikit-learn
 
-matplotlib
+matplotlib -->
 
 # Methodology
 ![image](https://user-images.githubusercontent.com/64198273/208200101-b71db1d5-7bd4-48cb-bd1a-cce7a91efceb.png)
