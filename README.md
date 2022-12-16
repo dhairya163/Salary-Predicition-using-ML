@@ -46,7 +46,7 @@ Streamlit library is used to render WebApp and link the model to a WebApp where 
 
 https://dhairya163-salary-predicition-using-ml-app-zsd8e4.streamlit.app/
 
-# 5.Screenshots of the Interface
+# 5. Screenshots of the Interface
 
 ![image](https://user-images.githubusercontent.com/64198273/144755560-5a8128f5-aafe-4d0b-8c6c-51f57b0f8fa0.png)
 
