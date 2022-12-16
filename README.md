@@ -17,6 +17,8 @@ pickle
 
 scikit-learn
 
+matplotlib
+
 # Steps to run webapp -
 
 Execute command in terminal to run WebApp -
