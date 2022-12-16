@@ -13,8 +13,6 @@ numpy
 
 pandas
 
-pickle
-
 scikit-learn
 
 matplotlib
