@@ -17,6 +17,10 @@ scikit-learn
 
 matplotlib
 
+# Methodology
+![image](https://user-images.githubusercontent.com/64198273/208200101-b71db1d5-7bd4-48cb-bd1a-cce7a91efceb.png)
+
+
 # Steps to run webapp -
 
 Execute command in terminal to run WebApp -
