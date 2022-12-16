@@ -28,7 +28,11 @@ Execute command in terminal to run WebApp -
 streamlit run {destination_folder}\app.py   -->
 
 # 2. Description 
+Created a WebApp where user can predict Software Developer salary by giving input various number of features such as Country , Level of Education and Work Experience. Salary is predicted using Machine Learning models such as Decision Trees , Linear Regressor and more.
 
+The data is taken from Developer Survey result by StackOverflow 2020. The data is then cleaned and scaled before applying the regression model.
+
+Streamlit library is used to render WebApp and link the model to a WebApp where user can input various fields in port of buttons and sliders and the python script calculates the salary based on the given input using the regression model selected.
 
 # 3. Input/Output
 
