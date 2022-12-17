@@ -30,6 +30,7 @@ streamlit run {destination_folder}\app.py   -->
 # 2. Description 
 
 Models used - Decision Trees , Linear Regressor and Gradient Regressor.
+
 Dataset used - StackOverflow Developer Survey 2020
 
 Created a WebApp where user can predict Software Developer salary by giving input various number of features such as Country , Level of Education and Work Experience. Salary is predicted using Machine Learning models such as Decision Trees , Linear Regressor and more.
