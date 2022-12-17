@@ -1,4 +1,4 @@
-<!-- # Salary-Predicition-using-ML
+# Salary Predicition Web-App using Machine Learning Algorithms and Dashboard for StackOverflow developer survey data visualization
 Created a WebApp where user can predict Software Developer salary by giving input various number of features such as Country , Level of Education and Work Experience. Salary is predicted using Machine Learning models such as Decision Trees , Linear Regressor and more.
 
 The data is taken from Developer Survey result by StackOverflow 2020. The data is then cleaned and scaled before applying the regression model.
